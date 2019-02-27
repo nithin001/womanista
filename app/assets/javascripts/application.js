@@ -12,5 +12,11 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+//= require javascripts/bootstrap.min
+//= require javascripts/jquery.slicknav.min.js
+//= require javascripts/owl.carousel.min.js
+//= require javascripts/jquery.nicescroll.min.js
+//= require javascripts/jquery.zoom.min.js
+//= require javascripts/jquery-ui.min.js
+//= require javascripts/main.js

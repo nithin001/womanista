@@ -1,0 +1,19 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top-letest-product-section {
+	.product-item .pi-pic {
+	    position: relative;
+	    display: flex;
+	    height: 360px;
+	}
+
+	.product-item .pi-text {
+		height: auto;
+	}
+}
