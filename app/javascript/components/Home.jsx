@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 require('es6-promise').polyfill();
 import fetch from "isomorphic-fetch";
 
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/products')
+    fetch('/api/products?filter=latest')
     .then(response => {
         if (response.status >= 400) {
             throw new Error("Bad response from server");
@@ -62,11 +63,10 @@ class Home extends React.Component {
             {this.state.products.map(product=> {
               return (<div className="product-item" key={product.id}>
               <div className="pi-pic">
-                <img src={product.image_one} alt="" />
+                <img src={product.image_one.replace(/v(\d*)\//g,'e_trim:30:white/')} alt="" />
               </div>
               <div className="pi-text">
-                <h6>{product.product_variations[0].price}</h6>
-                <a href={product.link} target="_blank">{product.name}</a>
+                <p>{product.name}</p>
               </div>
             </div>);
             })}

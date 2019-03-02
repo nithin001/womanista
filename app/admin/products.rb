@@ -12,17 +12,19 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
- permit_params :name, :description, :link, :image_one, :image_two, :product_category_id,
+ permit_params :name, :description, :link, :image_one, :image_two, :product_category_id, :product_catalogue_id, :rating,
  product_variations_attributes: [ :size, :color, :price, :id, :_destroy]
 
  form do |f|
  	f.inputs do
  		f.input :product_category
+ 		f.input :product_catalogue
 		f.input :name
 		f.input :link
 		f.input :description, as: :froala_editor
 		f.input :image_one
 		f.input :image_two
+		f.input :rating
 
 		f.has_many :product_variations, allow_destroy: true do |product_variation|
 		    product_variation.inputs "Product product_variations" do

@@ -10,10 +10,22 @@
 	.product-item .pi-pic {
 	    position: relative;
 	    display: flex;
-	    height: 360px;
+	    align-items: center;
+	    justify-content: center;
 	}
 
 	.product-item .pi-text {
 		height: auto;
 	}
 }
+
+ .owl-carousel .owl-item  {
+ 	.pi-pic {
+ 		img {
+		    display: block;
+		    height: 300px;
+		    width: auto;
+		}
+ 	}
+ }
+ 
