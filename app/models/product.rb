@@ -9,4 +9,14 @@ class Product < ActiveRecord::Base
 		order(id: :desc).limit(10)
 	end
 
+	def self.featured
+		Product.find_by_sql("SELECT rank_filter.* FROM (
+	        SELECT products.*, 
+	        rank() OVER (
+	            PARTITION BY product_category_id
+	            ORDER BY id DESC
+	        )
+	        FROM products
+	    ) rank_filter WHERE RANK <= 5")
+	end
 end

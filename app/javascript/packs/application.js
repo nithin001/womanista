@@ -9,6 +9,7 @@
 
 
 import Home from 'components/Home'
+import Product from 'components/Product'
 import WebpackerReact from 'webpacker-react'
 
-WebpackerReact.setup({Home})
+WebpackerReact.setup({Home, Product})

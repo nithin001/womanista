@@ -1,0 +1,20 @@
+// Place all the styles related to the Product controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.product-pic-zoom {
+	position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	.product-big-img {
+	    display: block;
+	    height: 500px;
+	    width: auto;
+	}
+}
+
+.product-thumbs-track {
+	.pt {
+		outline: none;
+	}
+}

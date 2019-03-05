@@ -9,6 +9,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-rating": "^1.6.2",
     "react_ujs": "^2.4.4",
     "webpacker-react": "^0.3.2"
   },
