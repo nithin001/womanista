@@ -14,12 +14,9 @@
  *= require_self
  *= require stylesheets/animate
  *= require stylesheets/bootstrap.min
- *= require stylesheets/font-awesome.min
- *= require stylesheets/flaticon
  *= require stylesheets/slicknav.min
  *= require stylesheets/jquery-ui.min
  *= require stylesheets/owl.carousel.min
  *= require stylesheets/animate
  *= require stylesheets/style
- 
  */

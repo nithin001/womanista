@@ -10,31 +10,6 @@ class Home extends React.Component {
     this.state = {products: []};
   }
 
-  componentDidUpdate() {
-    $('.product-slider').owlCarousel({
-      loop: true,
-      nav: true,
-      dots: false,
-      margin : 30,
-      autoplay: true,
-      navText: ['<i class="flaticon-left-arrow-1"></i>', '<i class="flaticon-right-arrow-1"></i>'],
-      responsive : {
-        0 : {
-          items: 1,
-        },
-        480 : {
-          items: 2,
-        },
-        768 : {
-          items: 3,
-        },
-        1200 : {
-          items: 4,
-        }
-      }
-    });
-  }
-
   componentDidMount() {
     fetch('/api/products?filter=latest')
     .then(response => {
@@ -54,22 +29,35 @@ class Home extends React.Component {
     }
 
     return (
-      <section className="top-letest-product-section">
-        <div className="container">
-          <div className="section-title">
-            <h2>LATEST PRODUCTS</h2>
-          </div>
-          <div className="product-slider owl-carousel">
-            {this.state.products.map(product=> {
-              return (<div className="product-item" key={product.id}>
-              <div className="pi-pic">
-                <img src={product.image_one.replace(/v(\d*)\//g,'e_trim:30:white/')} alt="" />
+      <section className="feature_product_area section_gap">
+        <div className="main_box">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="main_title">
+                  <h2>Featured Products</h2>
+                  <p>These are the latest products we have picked (specially for you, as always).</p>
+                </div>
               </div>
-              <div className="pi-text">
-                <p>{product.name}</p>
-              </div>
-            </div>);
-            })}
+            </div>
+            <div className="row">
+              {this.state.products.map((product, index)=> {
+              return (<div className={`col col${index+1}`} key={product.id}>
+                <div className="f_p_item">
+                  <div className="f_p_img">
+                    <img src={product.image_one.replace(/v(\d*)\//g,'e_trim:30:white/')} alt="" className="img-fluid"/>
+                    <div className="p_icon">
+                      <a href="#">
+                        <i className="far fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <h4>{product.name}</h4>
+                  </a>
+                </div>
+              </div>)})}
+            </div>
           </div>
         </div>
       </section>
@@ -77,4 +65,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+export default Home;

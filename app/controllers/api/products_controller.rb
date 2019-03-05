@@ -4,6 +4,10 @@ class Api::ProductsController < ApplicationController
 		render json: products, :include => [:product_variations]
 	end
 
+	def show
+		product = Product.find(params[:id])
+		render json: product, :include => [:product_variations]
+	end
 
 	private
 

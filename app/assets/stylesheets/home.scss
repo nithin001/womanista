@@ -2,30 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.top-letest-product-section {
-	.product-item .pi-pic {
-	    position: relative;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	}
-
-	.product-item .pi-text {
-		height: auto;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
- .owl-carousel .owl-item  {
- 	.pi-pic {
- 		img {
-		    display: block;
-		    height: 300px;
-		    width: auto;
-		}
- 	}
- }
- 
+.f_p_img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        display: block;
+        height: 300px;
+        width: auto;
+    }
+}
+
+.feature-icon {
+
+	font-size: 32px;
+    line-height: 32px;
+
+	i {
+		color: #fff;
+	}
+	i.invert {
+		color: #000;
+	}
+}
+
+// .hero-slider .hs-item .sb-line {
+// 	&:hover {
+// 		background-color: #f51167;
+// 	}
+// }

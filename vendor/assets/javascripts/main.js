@@ -74,7 +74,7 @@ $(window).on('load', function() {
         dots: true,
         animateOut: 'fadeOut',
     	animateIn: 'fadeIn',
-        navText: ['<i class="flaticon-left-arrow-1"></i>', '<i class="flaticon-right-arrow-1"></i>'],
+        navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -102,7 +102,7 @@ $(window).on('load', function() {
 		dots: false,
 		margin : 30,
 		autoplay: true,
-		navText: ['<i class="flaticon-left-arrow-1"></i>', '<i class="flaticon-right-arrow-1"></i>'],
+		navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
 		responsive : {
 			0 : {
 				items: 1,
